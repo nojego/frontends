@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Montserrat:wght@100&display=swap');
+
+
+
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+
+        /* display: flex; */
+        /* justify-content:space-between;  */
+        /* align-items: center; */
+
+        /* flex-direction: column; */
+        /* flex-wrap: wrap; */
+
+        border: 2px solid black;
+      }
+
+      .item1 {
+        grid-area: header;
+      }
+      .item2 {
+        grid-area: menu;
+      }
+      .item3 {
+        grid-area: main;
+      }
+      .item5 {
+        grid-area: footer;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-areas:
+          "header header header header"
+          "menu main main main"
+          "footer footer footer footer";
+        gap: 10px;
+        background-color: #2191f3;
+        padding: 10px;
+      }
+
+      .grid-container > div {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+      }
+
+      .item1 {
+        display: flex;
+
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        justify-content: space-around;
+
+        column-gap: 20px;
+
+        border: 2px solid black;
+        background-color: aquamarine;
+      }
+
+      .cabz01,
+      .cabz02,
+      .cabz03 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 20px;
+        background-color: rgb(5, 168, 65);
+        border: 2px dotted rgb(5, 168, 65);
+        overflow: hidden;
+      }
+
+      .item01 {
+        display: inline;
+      }
+      .cabz02 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-direction: column;
+
+        letter-spacing: 5px;
+      }
+      .cabz02>h2{
+        text-shadow: 4px 2px 4px yellow;
+      }
+      .cabz02>h5{
+        text-shadow: 4px 2px 4px yellow;
+      }
+
+      .cabz03{
+        border: 2px solid black;
+        padding: 5px;
+        margin: 5px;
+      }
+
+      .btn01 {
+        width: 100px;
+        height: 40px;
+
+        background-color: transparent;
+        border: 2px solid white;
+        border-radius: 10px;
+
+        color: white;
+        cursor: pointer;
+        transition: 0.4s;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .btn01:hover {
+        background-color: white;
+        color: black;
+      }
+
+      .btn02 {
+        width: 100px;
+        height: 40px;
+
+        background-color: white;
+        border: none;
+        border-radius: 10px;
+
+        color: black;
+        cursor: pointer;
+        transition: 0.4s;
+        font-family: "Montserrat", sans-serif;
+      }
+
+      .btn02:hover {
+        background-color: transparent;
+        color: white;
+        border: 2px solid white;
+      }
+
+      .videos {
+        padding: 0 10;
+        margin: 0 10;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 2px solid black;
+        flex-direction: column;
+      }
+      .videos > p{
+        font-size: small;
+      }
+
+      iframe {
+        width: 85%;
+        height: 50%;
+
+        border-radius: 10px;
+        overflow: hidden;
+
+        gap: 10px;
+      }
+      .iframe:hover {
+        transform: translate(10, 10);
+        transform: scale(1.2);
+      }
+
+      .biocel {
+        display: flex;
+        flex-direction: row;
+
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 10px;
+        background-color: rgb(179, 108, 255);
+        border: 2px dotted rgb(179, 108, 255);
+      }
+      .item05 > p,
+      .item06 > p,
+      .item07 > p,
+      .item08 > p,
+      .item09 > p,
+      .item10 > p,
+      .item11 > p,
+      .item12 > p,
+      .item13 > p,
+      .item14 > p,
+      .item15 > p,
+      .item16 > p,
+      .item17 > p,
+      .item18 > p,
+      .item19 > p{
+        font-size: small;
+
+      }
+
+      .bot {
+        display: flex;
+        border-radius: 20px;
+        background-color: rgb(5, 168, 65);
+        border: 2px dotted rgb(5, 168, 65);
+
+        justify-content: center;
+        align-items: center;
+      }
+      .ecol {
+        display: flex;
+        border-radius: 20px;
+        background-color: rgb(223, 164, 3);
+        border: 2px dotted rgb(223, 164, 3);
+
+        justify-content: center;
+        align-items: center;
+      }
+      .tecnol {
+        display: flex;
+        border-radius: 20px;
+        background-color: rgb(254, 5, 167);
+        border: 2px dotted rgb(254, 5, 167);
+
+        justify-content: center;
+        align-items: center;
+      }
+      .zool {
+        display: flex;
+        border-radius: 20px;
+        background-color: rgb(179, 108, 255);
+        border: 2px dotted rgb(179, 108, 255);
+
+        justify-content: center;
+        align-items: center;
+      }
+
+      .item5 {
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        border: 2px dotted rgb(215, 154, 0);
+      }
+
+      .footizq {
+        border: 2px dotted rgb(0, 7, 215);
+      }
+      .footder {
+        border: 2px dotted rgb(204, 0, 215);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="item1">
+        <div class="cabz01">
+          <img
+            class="item01"
+            src="./img/biologia.png"
+            alt="Logo"
+            width="75vw"
+          />
+        </div>
+        <div class="cabz02">
+          <h2>BIOLOGÍA</h2>
+          <h5>Disciplina para la Vida</h5>
+        </div>
+        <div class="cabz03">
+          <div class="btn">
+            <button class="btn01">Inicio Sesión</button>
+            <button class="btn02">Registro</button>
+          </div>
+        </div>
+      </div>
+      <div class="item2">
+        <!-- Menu -->
+      </div>
+      <div class="item3">
+        <!-- Main -->
+        <article class="videos">
+          <div class="biocel">
+            <div class="item05">
+              <iframe
+                class="iframe"
+                src="https://www.youtube.com/embed/Nl_DDREWmuc controls=0"
+                title="¿Qué és la Biología Celular"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+              <p>¿Qué és la Biología Celular?</p>
+            </div>
+            <div class="item06">
+              <iframe
+                class="iframe"
+                src="https://www.youtube.com/embed/AQYT3VdMK74?start=29 controls=0"
+                title="Objeto de Estudio de la Biología Celular"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+              <p>Objeto de Estudio de la Biología Celular</p>
+            </div>
+            <div class="item07">
+              <iframe
+                class="iframe"
+                src="https://www.youtube.com/embed/DVi6_APtvRw?start=4 controls=0"
+                title="Importancia de la Biología Celular"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <p>Importancia de la Biología Celular</p>
+            </div>
+          </div>
+          <div class="bot">
+            <div class="item08">
+              <iframe
+                class="iframe"
+                src="https://www.youtube.com/embed/7Ojk7MkvWVY controls=0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+              <p>¿Qué és la Botánica?</p>
+            </div>
+            <div class="item09">
+              <iframe
+                class="iframe"
+                src="https://www.youtube.com/embed/4F630khz8J0?start=15 controls=0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <p>Objeto de Estudio de la Botánica</p>
+            </div>
+            <div class="item10">
+              <iframe
+                class="iframe"
+                src="https://www.youtube.com/embed/gliTyV5HsmE?start=10 controls=0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <p>Importancia de la Biología Celular</p>
+            </div>
+          </div>
+          <div class="ecol">
+            <div class="item11">
+              <iframe
+                src="https://www.youtube.com/embed/vB6dt4NQDmQ?start=4 controls=0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+              <p>¿Qué és la Ecología?</p>
+            </div>
+            <div class="item12">
+              <iframe
+              class="iframe"
+              src="https://www.youtube.com/embed/kYUGj6KdkZ0?start=91 controls=0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              ></iframe>
+              <p>Objeto de Estudio de la Ecología</p>
+            </div>
+            <div class="item13">
+              <iframe
+              class="iframe"
+              src="https://www.youtube.com/embed/eud78nVB844?start=91 controls=0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              ></iframe>
+              <p>Importancia de la Ecología</p>
+            </div>
+          </div>
+          <div class="tecnol">
+            <div class="item14">
+              <iframe
+              class="iframe"
+              src="https://www.youtube.com/embed/kQfh1jy-VnE?start=47 controls=0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+            <p>¿Qué és la Tecnología de Alimentos?</p>
+          </div>
+          <div class="item15">
+            <iframe
+            class="iframe"
+            src="https://www.youtube.com/embed/-nu1sR38xIk?start=3 controls=0"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+            <p>Objeto de Estudio de la Tecnología de Alimentos</p>
+          </div>
+          <div class="item16">
+            <iframe
+            class="iframe"
+            src="https://www.youtube.com/embed/p8UmQwgMyew?start=54 controls=0"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            ></iframe>
+            <p>Importancia de la Tecnología de Alimentos</p>
+          </div>
+        </div>
+        <div class="zool">
+            <div class="item17">
+              <iframe
+              class="iframe"
+                src="https://www.youtube.com/embed/QNQpDC3JzuQ?start=54 controls=0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                ></iframe>
+                <p>¿Qué és la Zoología?</p>
+              </div>
+              <div class="item18">
+                <iframe
+                class="iframe"
+                src="https://www.youtube.com/embed/gnkQ8CwCeRg?start=58 controls=0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                ></iframe>
+                <p>Objeto de Estudio de la Zoología</p>
+              </div>
+              <div class="item19">
+                <iframe
+                class="iframe"
+                src="https://www.youtube.com/embed/1nT_In70_RE?start=723 controls=0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <p>Importancia de la Zoología</p>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="item5">
+        <!-- Footer -->
+        <div class="footizq">
+          <div class="item20">20</div>
+        </div>
+        <div class="footder">
+          <div class="item21">21</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
